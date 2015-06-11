@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+#  get 'wows2/index'
+
+#  get 'wows2/wow2get'
+
+#  get 'wows2/wow2collget'
+
   #get 'welcome/index'
   resources :posts
   resources :product
@@ -18,16 +24,28 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+     resources :wows do
+       member do
+         get 'wowstart'
+         post 'wowend'
+       end
+  
+       collection do
+         get 'search'
+         get 'search2'
+       end
+     end
+
+     resources :wows2 do
+       member do
+         get 'wow2get'
+         post 'wow2post'
+       end
+  
+       collection do
+         get 'wow2collget'
+       end
+     end     
 
   # Example resource route with sub-resources:
   #   resources :products do

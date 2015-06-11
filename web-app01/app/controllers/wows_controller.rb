@@ -1,0 +1,2 @@
+class WowsController < ApplicationController
+end

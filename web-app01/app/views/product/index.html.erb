@@ -1,5 +1,9 @@
 <h1>products_index</h1>
-
-<%= link_to "私のブログ", controller: "posts" %>
-<%= link_to 'myself',  controller: "product" %>
-<%= link_to '戻る', posts_path %>
+<%= form_for :product, url: products_path do |f| %>
+<!-- form_for(@product, url: search_products_path, html: { method: :get, class: 'form-horizontal', role: 'form' }) do |f| %>
+-->
+  <%= f.label :code, "code" %><br>
+  <%= f.text_field :code %>
+  <%= f.label :name, "name" %><br>  
+  <%= f.text_field :name %>
+<% end %>
