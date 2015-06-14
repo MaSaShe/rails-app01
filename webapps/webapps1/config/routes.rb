@@ -1,18 +1,9 @@
 Rails.application.routes.draw do
-#  get 'wows2/index'
-
-#  get 'wows2/wow2get'
-
-#  get 'wows2/wow2collget'
-
-  resources :welcome
-  resources :posts
-  resources :product
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'posts#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -24,18 +15,17 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-     resources :wows do
-       member do
-         get 'wowstart'
-         post 'wowend'
-       end
-  
-       collection do
-         get 'search'
-         get 'search2'
-       end
-     end
-     
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

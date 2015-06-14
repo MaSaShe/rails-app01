@@ -1,2 +1,13 @@
 <h1>Wows#index</h1>
 <p>Find me in app/views/wows/index.html.erb</p>
+
+<%= form_for @form, url: '/employees', method: :get do |f| %>
+  <p>
+    <%= f.label :name, '氏名:' %>
+    <%= f.text_field :name %>
+  </p>
+ <p>
+    <%= submit_tag '検索する' %>
+  </p>
+<% end %>
+
